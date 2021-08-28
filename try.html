@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습하기</title>
+
+    <style>
+
+        .font_arial { font-family: '없는 폰트', sans-serif; }
+
+        /* 헤더 태그들 */
+        #header {
+            width: 100%; height: 50px; padding-left: 50px ;
+            background-color: black;
+        }
+        #header div form {
+            display: inline;
+            float: left; 
+            line-height: 50px ;
+        }
+
+        #header div a {
+            padding-left: 20px ;
+            text-decoration: none ; color: white ; 
+            line-height: 50px ;
+            font-weight: bold;
+        }
+
+        /* 네비 태그들 */
+
+        .box1 {
+            width: 100%; height: 65px;
+            position: absolute;
+        }
+
+        .menubox {
+            border: 1px solid rgb(231, 231, 231)
+        }
+
+        .menubox > p {
+            line-height: 65px;
+
+        }
+
+        #menu ul {
+            padding: 20px 60px 20px 60px;
+            text-align: center;
+        }
+        #menu ul p {
+            display: inline;
+            
+        }
+
+        /* 셀렉션 태그들 */
+    
+
+        .box { 
+            width: 600px; height: 200px;
+            position: absolute; 
+        }
+
+        .repositories1 {
+            left: 1000px; 
+            border : 1px solid rgb(29, 29, 29); }
+        .repositories2 { 
+            left: 200px;
+            border : 1px solid rgb(29, 29, 29); }
+
+        .main > div {
+            width: 600px; height: 200px;
+            position: relative;
+        }
+
+
+
+        /* 푸터 태그들 */
+        #final_1 a {
+            text-decoration: none; color: rgb(50, 179, 184);
+            font-size: small;
+        }
+
+        #final_1 > a:nth-of-type(1) {
+            color: rgb(206, 202, 202);
+            
+        }
+
+
+
+    
+    </style>
+
+</head>
+<body>
+    <header id="header">
+        <div>
+            <form method="get">
+                <a href="#"><input type="text" name="Search /" placeholder="Search or jump to...    / " /></a>
+                <input type="submit" />
+            </form>
+            <div>
+                <a href="#">Pull requests</a>
+                <a href="#">lssues</a>
+                <a href="#">Marketplace</a>
+                <a href="#">Marketplace</a>
+            </div>
+            
+        </div>
+    </header>
+
+    <nav id="menu">
+        <div>
+            <div class="box1 menubox"></div>
+        </div>
+        <ul>
+            <p>overview</p>
+            <p>Repositories</p>
+            <p>Projects</p>
+            <p>Packges</p>
+        </ul>
+        
+    </nav>
+
+    <section id=main_1>
+        <div class="main">
+            <h4>Popular Repositories</h4>
+            <p>customize your pins</p>
+            <div>
+                <div class="box repositories1"></div>
+                <div class="box repositories2"></div>
+            </div>
+        </div>
+        
+        <div class="main">
+            <h4>51 contributions in the last year</h4>
+            <select>
+                <optgroup label="contribution settings">
+                    <option value="Private contributions">Private contributions</option>
+                </optgroup>
+                <optgroup label="contribution settings">
+                    <option value="Activity overview">Activity overview</option>
+                </optgroup>
+            </select>
+        </div>
+        <div>
+            <h4>Contribution activity</h4>
+        </div>
+        <div>
+            <p>August 2021</p>
+        </div>
+        <div>
+            <h6>Seeing something unexpected? Take a look at the <a href="#">GitHub profile guide.</a></h6>
+        </div>
+
+    </section>
+
+    <footer id="final_1">
+        <a href="#">2021 GitHub, Inc.</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Security</a>
+        <a href="#">Status</a>
+        <a href="#">Docs</a>
+        <a href="#">Contact GitHub</a>
+        <a href="#">Pricing</a>
+        <a href="#">API</a>
+        <a href="#">Training</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+
+    </footer>
+</body>
+</html>
