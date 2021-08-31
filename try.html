@@ -8,6 +8,12 @@
 
     <style>
 
+        * { margin: 0; padding: 0; }
+        body { font-family: sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; } 
+        img { border: 0; }
+
         .font_arial { font-family: '없는 폰트', sans-serif; }
 
         /* 헤더 태그들 */
@@ -76,19 +82,26 @@
 
 
         /* 푸터 태그들 */
+
+        #final_1 {
+            width: 960px; margin: 0 auto;
+            margin-bottom:10px;
+        }
+
         #final_1 a {
             text-decoration: none; color: rgb(50, 179, 184);
             font-size: small;
         }
 
         #final_1 > a:nth-of-type(1) {
-            color: rgb(206, 202, 202);
-            
+            color: rgb(206, 202, 202);   
         }
 
+        #final_1 > ul { overflow: hidden; }
+        #finla_1 > ul > li { float: left; }
+        #finla_1 > ul > li > a {}
 
-
-    
+   
     </style>
 
 </head>
@@ -156,19 +169,20 @@
     </section>
 
     <footer id="final_1">
-        <a href="#">2021 GitHub, Inc.</a>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
-        <a href="#">Security</a>
-        <a href="#">Status</a>
-        <a href="#">Docs</a>
-        <a href="#">Contact GitHub</a>
-        <a href="#">Pricing</a>
-        <a href="#">API</a>
-        <a href="#">Training</a>
-        <a href="#">Blog</a>
-        <a href="#">About</a>
-
+        <ul>
+            <li><a href="#">2021 GitHub, Inc.</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Contact GitHub</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Training</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
     </footer>
 </body>
 </html>
