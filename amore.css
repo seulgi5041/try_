@@ -1,0 +1,69 @@
+@charset "UTF=8";
+
+/* 초기화 */
+* { margin: 0; padding: 0; }
+body { font-family: sans-serif; }
+li { list-style: none; }
+a { text-decoration: none; }
+img { border: 0; }
+
+/* 헤더 */
+#main_header {
+    position: fixed;
+    margin: 0 auto;
+    min-height: 145px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+}
+
+
+/* lnb메뉴 */
+.menu_lnb {
+    position: relative;
+    height: 45;
+    width: 100%;
+    top: 45px;
+    
+}
+
+/* gnb메뉴 */
+
+.menu_gnb {
+    position: relative;
+    padding: 20px 10px;
+    margin-left: 600px;
+    margin-top: 50px;
+}
+
+/* 수평정렬 */
+/* lnb */
+.menu_lnb > ul { overflow: hidden; }
+.menu_lnb > ul > li { float: left; }
+.menu_lnb > ul > li >a { 
+    padding: 10px;
+    color: white;
+ }
+ /* 수평정렬 */
+ /* gnb */
+.menu_gnb > ul { overflow: hidden; }
+.menu_gnb > ul > li { float: left; }
+.menu_gnb > ul > li > a { 
+    padding: 20px;
+    color: white;
+ }
+
+ /* 타이틀 */
+#title { 
+    position: absolute;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+
+/* 섹션 */
+/* 섹션1 */
+
+
+
