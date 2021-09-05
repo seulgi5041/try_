@@ -9,61 +9,172 @@ img { border: 0; }
 
 /* 헤더 */
 #main_header {
-    position: fixed;
     margin: 0 auto;
-    min-height: 145px;
     width: 100%;
-    background: rgb(0, 0, 0);
+
+    height: 800px;
+    background: rgb(150, 148, 148);
 }
 
 
 /* lnb메뉴 */
 .menu_lnb {
-    position: relative;
-    height: 45;
-    width: 100%;
-    top: 45px;
-    
+    padding: 20px;
 }
 
 /* gnb메뉴 */
-
 .menu_gnb {
-    position: relative;
-    padding: 20px 10px;
-    margin-left: 600px;
-    margin-top: 50px;
+    padding: 20px;
+}
+
+/* 타이틀 */
+#title {
+    padding: 20px;
+    color: white;
 }
 
 /* 수평정렬 */
-/* lnb */
 .menu_lnb > ul { overflow: hidden; }
 .menu_lnb > ul > li { float: left; }
-.menu_lnb > ul > li >a { 
-    padding: 10px;
-    color: white;
- }
- /* 수평정렬 */
- /* gnb */
-.menu_gnb > ul { overflow: hidden; }
-.menu_gnb > ul > li { float: left; }
-.menu_gnb > ul > li > a { 
+.menu_lnb > ul > li > a {
     padding: 20px;
     color: white;
- }
+}
 
- /* 타이틀 */
-#title { 
-    position: absolute;
-    text-align: center;
+.menu_gnb > ul { overflow: hidden; }
+.menu_gnb > ul > li { float: left; }
+.menu_gnb > ul > li > a {
+    padding: 20px;
     color: white;
-    margin-top: 50px;
-    margin-left: 150px;
 }
 
 
-/* 섹션 */
-/* 섹션1 */
+/* 메인배너 */
+
+
+/* 메인 */
+#main {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 20px;
+}
+
+#main > #main_news {
+
+}
+
+#main > #main_news > .news h2 {
+    display: inline;
+    padding: 10px;
+}
+
+#main > #main_news > .news span {
+    padding-left: 750px;
+}
+
+/* 메인 이미지들 */
+#main > #main_news { overflow: hidden; }
+#main > #main_news > .p {
+    float:left;
+    width: 386px;
+    padding: 10px;
+    text-align: center;
+}
+
+#main > #main_news > .p:nth-of-type(3) {
+    padding-left: 0px;
+}
+#main > #main_news > .p:nth-of-type(4) {
+    padding-left: 0px;
+}
+
+#main > #main_news > .p h4 {
+    padding: 10px 0px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#main > #main_news > .p p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* 중간배너 */
+#banner_2 > .banner2 img { 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* 인스타그램 */
+
+#main_sns > .sns_1 h2 {
+    display: inline;
+    padding: 10px;
+}
+
+#main_sns > .sns_1 span {
+    padding-left: 580px;
+}
+
+#main_sns > .sns_1 span a {
+    padding-left: 170px;
+}
 
 
 
+.sns_1 > ul { overflow: hidden; }
+.sns_1 > ul > li { float: left; }
+.sns_1 > ul > li img { 
+    padding: 10px;
+}
+
+/* .sns_1 > ul > li a img:nth-of-type(7)~img:last-of-type {
+    padding-top: 10px;
+} */
+
+
+
+
+/* 푸터 */
+#main_footer {
+    margin: 0 auto;
+    width: 100%;
+
+    height: 163px;
+    background: rgb(150, 148, 148);
+}
+
+
+/* 푸터상단 */
+#main_footer > .foot_menu {
+    padding: 30px;
+    border-bottom: 1px solid white;
+    padding-left: 50px;
+    margin: 0px 30px;
+}
+
+#main_footer > .foot_menu > ul > li:nth-of-type(7) {
+    padding-left: 700px;
+}
+
+
+
+/* 수평정렬 */
+#main_footer > .foot_menu > ul { overflow: hidden; }
+#main_footer > .foot_menu > ul > li { float: left; }
+#main_footer > .foot_menu > ul > li a {
+    padding: 20px;
+    color: white;
+}
+
+
+/* 푸터하단 */
+#main_footer > .ad {
+    padding: 30px;
+    padding-left: 50px;
+    margin-left: 30px;
+}

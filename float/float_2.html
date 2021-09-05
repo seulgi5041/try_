@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            box-sizing:border-box;
+        }
+
+        .container {
+            width: 540px;
+            border: 1px solid gray;
+            margin: auto;
+        }
+
+        header {
+            border-bottom: 1px solid gray;
+        }
+
+     
+
+        nav {
+            float: left;
+            width: 120px;
+            border-right: 1px solid gray;
+
+        }
+
+        article {
+            float: left;
+            width: 300px;
+            border-left: 1px solid gray;
+            border-right: 1px solid gray;
+
+            /* navd의 보더 오른쪽과 아티클의 보더 왼쪽이 만나며 두꺼워진 것을 방지하기 위해 */
+            margin-left: -1px
+        }
+
+        aside {
+            float: left;
+            width: 120px;
+
+            border-left: 1px solid gray;
+            margin-left: -1px
+
+
+        }
+
+        footer {
+            clear: both;
+            border-top: 1px solid gray;
+            text-align: center;
+            padding: 20px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSS</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li>position</li>
+                <li>float</li>
+                <li>flex</li>
+            </ul>
+        </nav>
+        <article>
+            <h2>float</h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur dolores deleniti odit dolor dolore molestias dicta repudiandae sit dolorem error, voluptatem reiciendis maxime ducimus voluptas cumque? Enim, illo dolorem natus repellat sed magni. Odit nesciunt sunt debitis architecto, sapiente reiciendis. Officia corrupti enim quisquam eligendi officiis assumenda ipsam aperiam nobis.
+        </article>
+        <aside>
+            ad
+        </aside>
+        <footer>
+            copyleft
+        </footer>
+    </div>
+</body>
+</html>

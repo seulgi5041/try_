@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 45px;
+            text-align: center;
+            border-bottom: 1px solid gray;
+            margin: 0;
+            padding: 20px;
+        }
+
+        ol { 
+            border-right: 1px solid gray;
+            width: 100px;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+
+        #grid > ol {
+            padding-left: 33px;
+        }
+
+        #grid > #article {
+            padding-left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="#">WEB</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+        </ol>
+        <div id="article">
+            <h2>CSS</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. (CSS) Consequatur dignissimos eum, impedit maxime exercitationem commodi illum ducimus sunt, soluta obcaecati cum amet laudantium fuga qui animi nostrum laboriosam alias corporis. Suscipit atque id iure dolores ipsam, ad odit temporibus fuga ipsa alias itaque, voluptatibus et! Vel, saepe quod debitis aliquid numquam aliquam reiciendis illum odio, praesentium repellat neque? Quidem at, illum saepe molestias exercitationem placeat nam quos, libero labore recusandae dolorem ut cum suscipit dolorum quibusdam voluptatem asperiores quasi, accusamus est deleniti distinctio earum. Voluptatum itaque culpa quibusdam odit ipsum nulla aut quisquam ab? Vero molestias dolorum nesciunt excepturi a.</p>
+        </div>
+    </div>
+</body>
+</html>
