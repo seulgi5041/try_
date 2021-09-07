@@ -12,10 +12,9 @@ img { border: 0; }
     margin: 0 auto;
     width: 100%;
     
+    position: relative;
     height: 800px;
-    background: rgb(150, 148, 148);
-    
-    
+    background: rgb(0, 0, 0);   
 }
 
 
@@ -23,23 +22,29 @@ img { border: 0; }
 .menu_lnb {
     padding: 20px;
     margin-left: 1500px;
+    
 }
 
 /* gnb메뉴 */
 .menu_gnb {
-    padding: 20px;
-    display: inline;
-    text-align: center;
+    position: absolute;
+    padding: 30px;
+    left: 600px;
+    top: 113px;
+    
 }
 
 
 /* 타이틀 */
 #title {
+    position: absolute;
     padding: 20px;
     color: white;
-
     padding-left: 50px;
+    top: 100px;
+    left: 100px;   
 }
+
 
 /* 수평정렬 */
 .menu_lnb > ul { overflow: hidden; }
@@ -59,12 +64,18 @@ img { border: 0; }
 
 /* 메인배너 */
 
+#main_banner > .ban img {
+    position: absolute;
+    top: 200px;
+}
+
 
 /* 메인 */
 #main {
     margin: 0 auto;
     width: 1200px;
     padding: 20px;
+    padding-top: 100px;
 }
 
 #main > #main_news {
@@ -87,6 +98,8 @@ img { border: 0; }
     width: 386px;
     padding: 10px;
     text-align: center;
+
+    padding-top: 30px;
 }
 
 #main > #main_news > .p:nth-of-type(3) {
@@ -113,11 +126,15 @@ img { border: 0; }
 
 /* 중간배너 */
 #banner_2 > .banner2 img { 
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 120px;
 }
 
 /* 인스타그램 */
+
+#main_sns {
+    padding-bottom: 40px;
+}
 
 #main_sns > .sns_1 h2 {
     display: inline;
