@@ -6,3 +6,16 @@ body { font-family: sans-serif; }
 li { list-style: none; }
 a { text-decoration: none; }
 img { border: 0; }
+
+/* 헤더 */
+
+#main_header {
+    position: relative;
+    height: 200px;
+}
+
+#main_header > .top_warp {
+    position: absolute;
+    
+}
+
