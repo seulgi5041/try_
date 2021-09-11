@@ -10,12 +10,113 @@ img { border: 0; }
 /* 헤더 */
 
 #main_header {
+    /* 가운데 정렬. width 반드시 지정 */
+    margin: 0 auto;
+    width: 100%
+
     position: relative;
     height: 200px;
 }
 
-#main_header > .top_warp {
+#main_header > #top_warp {
+    margin: 0 auto;
+    text-align: center;
+
+    height: 62px;
+    border: 1px solid rgb(255, 94, 0);
+    background: rgb(255, 94, 0);
+}
+
+#main_header > #top_warp a {
+    color: white;
+    line-height: 62px;
+    padding: 20px;
+}
+
+/* 상단쿠폰_버튼 */
+
+
+
+
+#main_header > #main_nav {
+    position: fixed;
+
+    width: 100%;
+    height: 130px;
+    
+    background: whitesmoke;
+}
+
+#main_header > #main_nav > .logo {
     position: absolute;
+    
+    top: 50px;
+    left: 60px;
+}
+
+#main_header > #main_nav > .menu_gnb {
+    position: absolute;
+
+    top: 50px;
+    left: 25%;
+}
+
+
+/* 수평정렬 */
+
+#main_header > #main_nav > .menu_gnb > ul { overflow: hidden; }
+#main_header > #main_nav > .menu_gnb > ul > li {float: left; }
+#main_header > #main_nav > .menu_gnb > ul > li a {
+    padding: 60px;
+    height: 80px;
+
+    color: gray;
+}
+
+
+/* 본문 */
+/* 컨텐츠1 */
+#container {
+    margin: 0 auto;
+    width: 100%;
+
+    position: relative;
+    height: 750px;
+}
+
+/* 컨텐츠1-양옆버튼 */
+#container > #content > .main_wrap .pre {
+    position: absolute;
+    line-height: 750px;
+
+    left: 20px;
+
+    padding-left: 3px;
+}
+
+#container > #content > .main_wrap .nex {
+    position: absolute;
+    line-height: 750px;
+
+    right: 20px;
+}
+
+/* 컨텐츠1-이미지 박스 생성 */
+#container > #content > .main_wrap > .main_slid {
+    position: absolute;
+    line-height: 750px;
+
+    margin: 20px;
+    width: 1865px;
+    height: 745px;
+
+    border: 1px solid gray;
     
 }
 
+#container > #content > .main_wrap > .main_slid > .m_text {
+    position: absolute;
+    line-height: 750px;
+
+    left: 33%;
+}
