@@ -81,7 +81,7 @@ img { border: 0; }
     width: 100%;
 
     position: relative;
-    height: 750px;
+    height: 780px;
 }
 
 /* 컨텐츠1-양옆버튼 */
@@ -119,4 +119,93 @@ img { border: 0; }
     line-height: 750px;
 
     left: 33%;
+}
+
+
+
+/* 컨텐츠2-실시간 인기 상품 */
+
+#main_popular {
+    margin: 0 auto;
+    width: 100%;
+
+    position: relative;
+    height: 180px;
+}
+
+#main_popular > .poular_box {
+    position: absolute;
+
+    width: 1570px;
+    height: 160px;
+    border-radius: 80px;
+    background-color: rgb(226, 226, 226);
+
+    margin-left: 9%;
+}
+
+#main_popular > .poular_box h3 {
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+}
+
+
+
+/* 수평정렬 */
+#main_popular > .poular_box > ul { overflow: hidden; }
+#main_popular > .poular_box > ul > li { 
+    float: left;
+    width: 31.3%;
+}
+#main_popular > .poular_box > ul > li a {
+    padding:20px;
+    line-height: 120px;
+}
+
+    /* 길이 넘어가면 ... 처리 해 주는 삼총사 */
+    
+
+#main_popular > .poular_box > ul > .text_ {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+
+
+
+
+
+
+
+/* 하단-선물하기 */
+#event {
+    position: relative;
+    height: 320px;
+}
+
+
+#event_box > .bottom_box {
+    position: absolute;
+
+    width: 166px;
+    height: 166px;
+    border-radius: 20px;
+    background-color: rgb(255, 149, 167);
+}
+
+#event_box > .bottom_box a {
+    position: absolute;
+
+    line-height: 166px;
+    color: white;
+}
+
+/* 마우스올려놨을때 */
+#event_box > .bottom_box:hover {
+    width: 617px;
+    height: 302px;
+    border-radius: 20px;
+    background-color: rgb(255, 149, 167);
 }
