@@ -76,19 +76,18 @@ img { border: 0; }
 
 
 /* 선물하기:hover효과 */
-#main_header > #event_box {
+#main_header > #event_box > .bottom_box {
     position: fixed;
+    
     bottom : 0px;
     left: 20px;
 }
 
 /* 마우스올려놨을때 */
-#event_box > .bottom_box:hover {
+#main_header > #event_box > .bottom_box:hover {
     width: 617px;
     height: 302px;
-    border-radius: 20px;
-
-    
+    background-color: rgb(216, 127, 141);
 }
 
 
