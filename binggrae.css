@@ -74,6 +74,28 @@ img { border: 0; }
 }
 
 
+
+/* 선물하기:hover효과 */
+#main_header > #event_box {
+    position: fixed;
+    bottom : 0px;
+    left: 20px;
+}
+
+/* 마우스올려놨을때 */
+#event_box > .bottom_box:hover {
+    width: 617px;
+    height: 302px;
+    border-radius: 20px;
+
+    
+}
+
+
+
+
+
+
 /* 본문 */
 /* 컨텐츠1 */
 #container {
@@ -179,33 +201,3 @@ img { border: 0; }
 
 
 
-/* 하단-선물하기 */
-#event {
-    position: relative;
-    height: 320px;
-}
-
-
-#event_box > .bottom_box {
-    position: absolute;
-
-    width: 166px;
-    height: 166px;
-    border-radius: 20px;
-    background-color: rgb(255, 149, 167);
-}
-
-#event_box > .bottom_box a {
-    position: absolute;
-
-    line-height: 166px;
-    color: white;
-}
-
-/* 마우스올려놨을때 */
-#event_box > .bottom_box:hover {
-    width: 617px;
-    height: 302px;
-    border-radius: 20px;
-    background-color: rgb(255, 149, 167);
-}
