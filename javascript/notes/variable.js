@@ -3,7 +3,7 @@
 // use this for Vanila Javascript.
 'use strict';
 
-// 2. Variable, rw(read/write) :변수 (변경될 수 있는 값)
+// 2. Variable, rw(read/write) :변수 (변경될 수 있는 값) (메모리에 읽고 쓰는 것이 가능.)
 // let (added in ES6)
 
 let globalName = 'global name';
@@ -31,7 +31,7 @@ console.log(globalName);
 console.log(age);
 
 
-// 3. Constant, r(read only) 한번 할당하면 값이 절대 바뀌지 않는 것.
+// 3. Constant, r(read only) 한번 할당하면 값이 절대 바뀌지 않는 것. (메모리를 읽는 것만 가능)
 // use const whenever possible.
 // only use let if variable needs to change.
 const daysInWeek = 7;
@@ -39,7 +39,7 @@ const maxNumber = 5;
 
 // Note!
 // Immutable data types: premitive types, frozen objects (i.e. object.freeze())
-// Mutable data types: all objects by default are mutable in JS
+// Mutable data types: all objects by default are mutable in JS(자바스크립트의 기본은 대부분 가능.)
 // favor immutable data type always for a few reasons:
 //  - security
 //  - thread safety

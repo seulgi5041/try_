@@ -44,14 +44,14 @@ console.log(10 >= 6); // greater than or equal
 const value1 = true;
 const value2 = 4 < 2;
 
-// || (or), finds the first truthy value
-console.log(`or: ${value1 || value2 || check()}`);
+// || (or), finds the first truthy value 하나라도 T면 무조건 T
+console.log(`or: ${value1 || value2 || check()}`); //함수를 호출하는 애들을 가장 뒤에 호출하는것이 가장 좋다.
 
-// && (and), finds the first falsy value
+// && (and), finds the first falsy value 하나라도 F면 무조건 F
 console.log(`and: ${value1 && value2 && check()}`);
 
 // often used to compress long if-statement
-// nullableObject && nullableObject.something
+// nullableObject && nullableObject.something  (&&는 null 판단할 때도 많이 씀.)
 
 function check() {
   for (let i = 0; i < 10; i++) {
@@ -80,9 +80,9 @@ console.log(stringFive !== numberFive);
 const ellie1 = { name: 'ellie' };
 const ellie2 = { name: 'ellie' };
 const ellie3 = ellie1;
-console.log(ellie1 == ellie2);
-console.log(ellie1 === ellie2);
-console.log(ellie1 === ellie3);
+console.log(ellie1 == ellie2); //F (아예 각각의 데이터를 차지하고있음)
+console.log(ellie1 === ellie2); //F (아예 각각의 데이터를 차지하고 있음)
+console.log(ellie1 === ellie3); //T (3의 데이터에 1의 데이터를 넣기로 했음.)
 
 // equality - puzzler
 console.log(0 == false);
@@ -125,7 +125,7 @@ switch (browser) {
     break;
 }
 
-// 11. Loops
+// 11. Loops (반복문)
 // while loop, while the condition is truthy,
 // body code is executed.
 let i = 3;
