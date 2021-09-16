@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number guessing game</title>
+
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+
+        .lastResult {
+            color: white;
+            padding: 3px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Number guessing game</h1>
+
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+
+    <div class="form">
+        <!-- 다음의 2개 변수는 입력과 버튼을 받고, 추측된 값을 받도록 하는 역할임 -->
+        <label for="guessField">Enter a guess: </label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+
+    <!-- 다음의 세 개의 변수들은 각각 HTML에서 결과 문장을 저장하는 기준으로 저장, 
+        코드상에서 나중에 문장에 추가되도록 사용된다. -->
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+
+        // 프로그램에서 사용될 데이터를 저장할 변수를 셋팅해줌.
+        var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        // 변수선언문: 세 개의 변수들(결과 문장을 저장)
+        var guesses = document.querySelector('.guesses');
+        var lastResult = document.querySelector('.lastResult');
+        var lowOrHi = document.querySelector('.lowOrHi');
+
+        // 입력과 버튼. 추측된 값을 받는 역할
+        var guessSubmit = document.querySelector('.guessSubmit');
+        var guessField = document.querySelector('.guessField');
+
+
+        // 얼마나 추측했는지에 대한 추측개수와 리셋 버튼에 대한 변수
+        var guessCount = 1;
+        var resetButton;
+
+        //focus() (en-US) 메소드를 통해 자동으로 커서를 페이지가 뜨자마자 <input> 텍스트 필드에 위치시킬 수 있음
+        // var guessField.focus();
+        // 입력 요소에 이용 가능한 메소드 중 하나가 focus()이다.
+        // 폼 요소의 정보를 가지고 있지 않은 변수는 focus() 를 사용할 수 없다.
+
+
+        function checkGuess() {
+            var userGuess = Number(guessField.value);
+            if(guessCount === 1) {
+                guesses.textContent = 'Previous guesses: ';
+            }
+            guesses.textContent += userGuess + ' ';
+
+            if (userGuess === randomNumber) { //유저가 추측한 값과 랜덤값이 같은지 비교
+                lastResult.textContent = 'Congratulations! You got it right!';
+                lastResult.style.backgroundColor = 'green';
+                lowOrHi.textContent = '';
+                setGameOver(); //게임을 더 할지와 관련된 함수를 불러온다.
+            } else if (guessCount === 10) { //사용자가 마지막 게임인지를 계산
+                lastResult.textContent = '!!!GAME OVER!!!';
+                setGameOver();
+            } else { //앞선 두 개의 조건이 모두 거짓일 때 실행됨.(숫자도 못 맞추고, 순서도 남음.)    
+                lastResult.textContent = 'Wrong!';
+                lastResult.style.backgroundColor = 'red';
+                if(userGuess < randomNumber) { //유저가 추측한 값이 랜덤 값보다 작다면
+                    lowOrHi.textContent = 'Last guess was too low!';
+                } else if(userGuess > randomNumber) { //유저가 추측한 값이 랜덤 값보다 크다면
+                    lowOrHi.textContent = 'Last guess was too high!';
+                }
+            }
+
+
+            // 다음 숫자 추측을 위한 것들.
+            guessCount++; //guessCount 변수에 1을 더함, 사용자의 차례가 한 번 지나갔음을 안다
+            guessField.value = ''; //값에 상관없이 텍스트필드를 공란
+            guessField.focus(); //커서를 위치시키며, 다음값이 입력될 수 있도록 한다.
+        }
+
+
+        //  "Submit guess" 버튼이 눌러져야 호출되므로, 이벤트를 사용해서 구현
+        // 이벤트가 발생하여 발생된 이벤트를 처리하는 것을 이벤트 리스너(event listeners)라 하고, 
+        // 이벤트가 발생했을 때 실행되는 코드 블록을 이벤트 핸들러(event handlers)라 한다.
+        guessSubmit.addEventListener('click', checkGuess);
+
+        // 두개의 입력(인수)를 가지는 addEventListner메소드이다. 
+        // 문자열로 클릭을 처리하는 이벤트이고, 이벤트가 발생했을 때 실행하고자 하는 코드는 checkGuess() 함수이다. 
+        // 특히, addEventListener() 안에서는 함수의 괄호가 필요 없다는 것에 주의한다.
+
+
+
+        function setGameOver() {
+            guessField.disablde = true;
+            guesseSubmit.disabled = true; //텍스트입력과 버튼의 diasbled 속성을 true로 해서 작동되지 않게한다.
+            resetButton = document.createElement('button'); //새로운 button엘리먼트 생성.
+            resetButton.textContent = 'Start new game';
+            document.body.appendChild(resetButton); //지정된 새 버튼을 클릭하면 리셋되게 한다.
+            resetButton.addEventListener('click', resetGame);
+        }
+
+
+        //게임이 어떻게 시작되며 사용자가 다시 시작할 수 있도록 초기화하는 코드
+        function resetGame() {
+            guessCount = 1;
+
+
+            //querySelectorAll() 메소드를 사용하여 <div class="resultParas">안의 모든 문장들의 배열을 변수로 만들고 있다. 
+            //그러고 반복을 통해 각각의 배열 원소에 접근하여, 내용을 제거하게된다.
+            //표시된 정보를 모두 초기화
+            var resetParas = document.querySelectorAll('.resetParas P');
+            for (var i = 0; i < resetParas.length; i++) {
+                resetParas[i].textContent = '';
+            }
+
+            //코드상에서 초기화 버튼을 제거
+            resetButton.parentNode.removeChild(resetButton);
+
+            //폼 작성을 위해 텍스트를 입력하는 곳을 비워놓고 커서를 위치시킨다.
+            guessField.disablde = false;
+            guesseSubmit.disablde = false;
+            guessField.value = '';
+            guessField.focus();
+
+            //lastResult변수 상의 문장 배경색을 제거
+            lastResult.style.backgroundColor = 'white';
+
+            //임의의 수를 다시 지정하여, 앞선 randomNumber와 겹치지 않도록 다시 설정
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+        }
+    </script>
+</body>
+</html>
