@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>select -옵션 단일선택</p>
+    <p>select multiple - 옵션 다중 선택</p>
+    <hr />
+
+
+
+    <form action="" method="GET">
+
+        <!-- 라디오, checkbox와 같은 이유. selcet 그룹의 네임을 주고, 서버가 알 수 있게 각각의 옵션에 밸류를 준다. -->
+        
+        <label for="skll">스킬</label>
+        <select name="skills" id="skll">       
+            <option value="html">HTML</option>
+            <option value="css">css</option>
+            <option value="js">javascript</option>
+        </select>
+
+
+        <hr />
+
+        <label for="fruit">과일선택</label>
+        <select multiple name="fruit" id="fruit">       
+            <option value="apple">apple</option>
+            <option value="banana">banana</option>
+            <option value="melon">melon</option>
+        </select>
+
+
+        <!-- 실행해서 제출하였을 때 밸류 값이 어떻게 나오는지 확인하자. -->
+        <button type="submit">
+            submit
+        </button>
+
+    </form>
+
+</body>
+</html>

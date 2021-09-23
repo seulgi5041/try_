@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>
+        정의리스크 
+    </h1>
+    <p>
+        용어를 정의할 때, 'key-value:' 로 정보를 정의할 때(예: 이름:OOO, 주소:OOO)
+    </p>
+    <p>
+        dl > dt > dd 순서로 와야 함
+    </p>
+    
+    
+    <h1>
+        Good예시
+    </h1>
+    <dl>
+        <dt>김버그</dt>
+        <dd>주니어 개발자의 성장 드라마를 두르는 유뷰트 채널</dd>
+    </dl>
+    
+    <dl>
+        <dt>김버그</dt>
+        <dt>Kimbugs</dt>
+        <dd>주니어 개발자의 성장 드라마를 두르는 유뷰트 채널</dd>
+    </dl>
+    
+    <dl>
+        <dt>
+            <dfn>development</dfn>
+        </dt>
+        <dd>1.발달, 성장</dd>
+        <dd>2. 개발, 신개발품</dd>
+    </dl>
+    
+    <dl>
+        <div>
+            <dt>사과</dt>
+        <dd>사과에 대한 설명</dd>
+        </div>	
+        <div>
+            <dt>바나나t>
+        <dd>바나나에 대한 설명</dd>
+        </div>	
+    </dl>
+    
+    
+    <h1>
+        Bad예시
+    </h1>
+    <dl>
+        <dt>김버그</dt>
+        <dd>주니어 개발자의 성장 드라마를 두르는 유뷰트 채널</dd>
+        <dt>데벨업</dt> <!-- 뒤에 설명하는 dd가 없음-->
+    </dl>
+    
+    
+    <p>Bad예시:dl 안에는 오로지 div > dt>dnf > dd만 올 수 있다. section 등 다른 태그는 틀림</p> 
+    <dl>
+        <section>
+            <dt>김버그</dt>
+            <dd>주니어 개발자의 성장 드라마를 두르는 유뷰트 채널</dd>
+        </section>
+    </dl>
+    
+
+</body>
+</html>

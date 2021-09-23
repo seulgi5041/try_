@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <h1>사용가능언어</h1>
+    <p>체크박스 역시 라디오와 방식이 완전 똑같음. 다중선택 가능하다는 것만 다름.</p>
+
+    <!-- 네임="같은 checkbox그룹이라면 네임을 동일하게 해줘야 같은 그룹이라는걸 알고 한개만 선택하라고 인식함" id="라벨for과동일"  밸류="서버에 보내줬을 때 서버가 확실히 알수 있게!!, 구분 할 수 있게!" -->
+    
+    <!-- 서버에 전송되는 방식: 체크박스그룹에서 동일한 OO네임을 가진 여러 아이들 중에서 어떤 아이가 선택 되었는지->> 밸류로 나타냄.   -->
+    <!-- 체크박스타입의 name=vale 로 표현된다. -->
+
+
+    <form action="" method="GET">
+    
+        <!-- input type="checkbox" name(같은 그룹인가?) value(서버가 구분을 할 수 있는가?) 반드시 들어가야 함-->
+    <input type="checkbox" name="skills" id="html" value="html" />
+    <label for="html">html</label>
+    <input type="checkbox" name="skills" id="css" value="css" />
+    <label for="css">css</label>
+    <input type="checkbox" name="skills" id="js" value="js" />
+    <label for="js">javascript</label>
+
+
+    <!-- 실행해서 제출하였을 때 밸류 값이 어떻게 나오는지 확인하자. -->
+    <button type="submit">
+        submit
+    </button>
+
+</form>
+</body>
+</html>
